@@ -1,0 +1,40 @@
+Final-project logins
+
+admin
+adminadmin
+86f1228fa05ffd648ed66b79020f3d48815102fe
+
+
+
+patricia(manager)
+man123.!
+b59a0927ed211086f063460d2d9a30cc9088d6b3
+
+meredith(manager)
+m1m2m3.!
+b8e9d0d306e8e25084ac1ab329e7cf3fd042e6ac
+
+albert (delivery-crew)
+del123.!
+9903250b0475332280826e3aac6ca9db4cc16ada
+
+bob (delivery-crew)
+del234.!
+0a4c14364460292b82f4ea21e869a019f50a8d06
+
+customer1
+c1c2c3.!
+9d3573c19fc807903fb333b220f4a20bb9b42ad4
+
+customer2
+c1c2c3.!
+d47ccadf5ec24a5efc730915de6bf839a7c2a9f0
+
+customer3
+c1c2c3.!
+9508074b5ba2baaca02b938fc402564f1952a5ba
+
+
+
+
+  
