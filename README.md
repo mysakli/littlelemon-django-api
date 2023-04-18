@@ -17,7 +17,7 @@ All endpoints *require authentication* via token-based authentication. You can o
 `api/menu-items/{id}` GET - list a single menu item
 
 ### Cart
-`api/cart` // GET - returns current items in the cart for the current user; POST - adds a menu item to the cart; DELETE - deletes all menu items from the user's cart
+`api/cart/menu-items` // GET - returns current items in the cart for the current user; POST - adds a menu item to the cart; DELETE - deletes all menu items from the user's cart
 
 ### Orders
 `api/orders` // GET - list user's orders (*customer*)/ list all orders (*managers*)/ list assigned orders (*delivery crew*); POST - adds items from the cart to a newly created order and deletes all items from the cart \
