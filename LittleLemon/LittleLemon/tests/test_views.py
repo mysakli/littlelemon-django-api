@@ -33,25 +33,15 @@ class SingleMenuItemViewTest(APITestCase):
         self.user = User.objects.create_user('tester', 'tester@littlelemon.com', 'testerpass')       
         self.c.force_authenticate(user=self.user)
         
-
         Category.objects.create(title='dessert')
         MenuItem.objects.create(title='Chocolate Frog', price=3, category_id=1, featured=False)
     
     def test_list_menu_item(self):
         response = self.c.get('/api/menu-items/1')
-        serializer = MenuItemSerializer(response)
+        menu_item = MenuItem.objects.get(id=1)
+        serializer = MenuItemSerializer(menu_item)
         self.assertEquals(response.status_code, 200)
-        # self.assertEquals(response.data, serializer.data)
-        self.assertEquals(response.data, {
-	"id":1,
-	"title":"Chocolate Frog",
-	"price":"3.00",
-	"featured":False,
-	"category": {
-		"id": 1,
-		"title": "dessert"
-	}
-})
+        self.assertEquals(response.data, serializer.data)
 
     
 class CartViewTest(APITestCase):
@@ -74,7 +64,6 @@ class CartViewTest(APITestCase):
         self.assertEquals(request_get.status_code, 200)
     
     def test_delete_items_from_cart(self):
-        # cart_items = Cart.objects.filter(user=self.user)
         response = self.c.delete('/api/cart/menu-items')
         self.assertEquals(response.status_code, 204)
         
